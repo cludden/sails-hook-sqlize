@@ -1,0 +1,26 @@
+{
+  "name": "sails-hook-sequelize",
+  "version": "0.0.1",
+  "description": "create sequelize model counterparts for sails models",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "sails": {
+    "isHook": true
+  },
+  "keywords": [
+    "sails",
+    "hook",
+    "sequelize"
+  ],
+  "author": "chris ludden",
+  "license": "MIT",
+  "devDependencies": {
+    "sails": "~0.11.0"
+  },
+  "dependencies": {
+    "sails": "^0.11.0",
+    "sequelize": "^3.5.1"
+  }
+}
