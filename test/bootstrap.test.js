@@ -53,7 +53,8 @@ describe('Basic tests ::', function() {
                 },
 
                 defaults: {
-                    timestamps: false
+                    timestamps: false,
+                    freezeTableName: true
                 }
             },
 

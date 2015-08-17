@@ -3,8 +3,6 @@
 var chai = require('chai'),
     expect = chai.expect;
 
-var Sequelize = require('sequelize');
-
 describe('hook#sequelize', function() {
     it('should return a valid hook', function() {
         expect(sails.hooks.sequelize).to.exist;
