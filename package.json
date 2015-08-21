@@ -1,5 +1,5 @@
 {
-  "name": "sails-hook-sequelize",
+  "name": "sails-hook-sqlize",
   "version": "0.0.1",
   "description": "create sequelize model counterparts for sails models",
   "main": "index.js",
