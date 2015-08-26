@@ -5,8 +5,8 @@ var chai = require('chai'),
 
 describe('hook#sequelize', function() {
     it('should return a valid hook', function() {
-        expect(sails.hooks.sequelize).to.exist;
-        expect(sails.hooks.sequelize).to.contain.all.keys('Sequelize', 'response');
+        expect(sails.hooks.sqlize).to.exist;
+        expect(sails.hooks.sqlize).to.contain.all.keys('Sequelize', 'response');
     });
 
     it('should produce valid Sequelize models', function() {
@@ -14,6 +14,12 @@ describe('hook#sequelize', function() {
             Model = user.sequelize.Model;
 
         expect(user).to.be.an.instanceOf(Model);
+    });
+
+    describe('config', function() {
+        it('should support sails logging', function() {
+            expect(sails.sequelize['user'].sequelize.options.logging).to.equal(sails.log.silly);
+        });
     });
 
     describe('queries', function() {

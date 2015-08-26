@@ -21,7 +21,7 @@ describe('hook#sequelize.response', function() {
                 expect(err).to.not.exist;
                 expect(user).to.be.an('object');
 
-                var response = sails.hooks.sequelize.response.flatten('user', user);
+                var response = sails.hooks.sqlize.response.flatten('user', user);
                 expect(response).to.be.an('object');
                 expect(response).to.contain.all.keys('user', 'organization');
                 done();

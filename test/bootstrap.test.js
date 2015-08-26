@@ -17,7 +17,7 @@ describe('Basic tests ::', function() {
                 pubsub: false,
                 views: false,
                 http: false,
-                sequelize: require('../'),
+                sqlize: require('../'),
                 grunt: false
             },
 
@@ -48,7 +48,8 @@ describe('Basic tests ::', function() {
                             max: 5,
                             min: 0,
                             idle: 1000
-                        }
+                        },
+                        logging: 'silly'
                     }
                 },
 
