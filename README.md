@@ -1,13 +1,13 @@
 # sails-hook-sqlize
 `Sequelize` hook for Sails.js v0.11
 
-# Install
+## Install
 `npm install --save sails-hook-sqlize`
 
-# Purpose
+## Purpose
 create `Sequelize` models using your sails model definitions, and make them available via `sails.sequelize['modelName']`, giving you access to both sails and sequelize models for the same table
 
-# Background
+## Background
 `Sails` is pretty great. Even `Waterline`, Sails' default ORM is pretty great and works fine for most heavily CRUD based apps. It even gives you some pretty cool things right out of the box like pubsub support over websockets. But when you start to get into some more complex querying, the limitations become apparent fairly quickly. My biggest complaint is `Waterline`'s lack of support for proper joins.
 
  Take a data structure like the following:
@@ -46,15 +46,29 @@ sails.sequelize['user'].findOne({
 }).nodeify(function(err, user) {});
 ```
  
- This `hook` aims to give you the best of both worlds, native `Waterline` models for your day-to-day CRUD stuff (blueprints, pubsub, etc), and more robust `Sequelize` models that will allow you to sleep soundly every night knowing that you have a model capable of handling your complex SQL needs. This module also does not require you to disable the native `Sails` hooks (orm, pubsub, etc) that some other hooks require.
+This `hook` aims to give you the best of both worlds, native `Waterline` models for your day-to-day CRUD stuff (blueprints, pubsub, etc), and more robust `Sequelize` models that will allow you to sleep soundly every night knowing that you have a model capable of handling your complex SQL needs. This module also does not require you to disable the native `Sails` hooks (orm, pubsub, etc) that some other hooks require.
  
- # Getting started
- Check out the `/api` folder for a sample model setup. Create a new file called `sequelize.js` in `/config` containing your config options (more to come on this, but for now, see `/test/bootstrap.test.js` for sample config)
+## Getting started
+Check out the `/api` folder for a sample model setup. Create a new file called `sequelize.js` in `/config` containing your config options (more to come on this, but for now, see `/test/bootstrap.test.js` for sample config)
+
+## Configuration
+Coming soon...
  
- # Testing
+## Testing
  - install a compatible sequelize database (mysql, postgresql, ms sql server, etc)
  - edit the connection info in `/test/bootstrap.test.js`
  - `npm test`
  
- # To Do
- Improve docs. Improve feature suite. ADD MORE TESTS.
+## To Do
+Improve docs. Improve feature suite. ADD MORE TESTS.
+
+## Contributing
+1. [Fork it](https://github.com/cludden/sails-hook-sqlize/fork)
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create new Pull Request
+
+## License
+Copyright (c) 2015 Chris Ludden
+Licensed under the [MIT license](LICENSE.md).
