@@ -39,8 +39,7 @@ describe('Basic tests ::', function() {
                 autoCreatedAt: false
             },
 
-            sequelize: {
-                defaultConnection: 'test',
+            sqlize: {
                 connections: {
                     test: {
                         dialect: 'mysql',
@@ -52,10 +51,11 @@ describe('Basic tests ::', function() {
                         logging: 'silly'
                     }
                 },
-
-                defaults: {
-                    timestamps: false,
-                    freezeTableName: true
+                options: {
+                    define: {
+                        timestamps: false,
+                        freezeTableName: true
+                    }
                 }
             },
 

@@ -18,6 +18,10 @@ module.exports = {
         groups: {
             collection: 'group',
             via: 'users'
+        },
+        profile: {
+            model: 'profile',
+            columnName: 'profile_id'
         }
     }
 };

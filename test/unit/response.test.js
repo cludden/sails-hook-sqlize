@@ -17,7 +17,6 @@ describe('hook#sequelize.response', function() {
                     as: 'organization'
                 }]
             }).nodeify(function(err, user) {
-                console.log(err);
                 expect(err).to.not.exist;
                 expect(user).to.be.an('object');
 

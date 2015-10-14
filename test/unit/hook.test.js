@@ -24,7 +24,18 @@ describe('hook#sequelize', function() {
 
     describe('queries', function() {
         it('should produce expected results', function(done) {
-            sails.sequelize['user'].findAll({}).nodeify(function(err, results) {
+            sails.sequelize['user'].findAll({
+                include: [{
+                    model: sails.sequelize['organization'],
+                    as: 'organization'
+                }, {
+                    model: sails.sequelize['profile'],
+                    as: 'profile'
+                }, {
+                    model: sails.sequelize['group'],
+                    as: 'groups'
+                }]
+            }).nodeify(function(err, results) {
                 expect(err).to.not.exist;
                 expect(results).to.be.an('array');
                 expect(results.length).to.equal(10);
