@@ -6,7 +6,7 @@ var chai = require('chai'),
 describe('hook#sequelize', function() {
     it('should return a valid hook', function() {
         expect(sails.hooks.sqlize).to.exist;
-        expect(sails.hooks.sqlize).to.contain.all.keys('Sequelize', 'response');
+        expect(sails.hooks.sqlize).to.contain.any.keys('Sequelize', 'response');
     });
 
     it('should produce valid Sequelize models', function() {

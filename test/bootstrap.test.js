@@ -13,10 +13,10 @@ describe('Basic tests ::', function() {
         // Attempt to lift sails
         Sails().lift({
             hooks: {
-                sockets: false,
+                //sockets: false,
                 pubsub: false,
                 views: false,
-                http: false,
+                //http: false,
                 sqlize: require('../'),
                 grunt: false
             },
@@ -28,7 +28,7 @@ describe('Basic tests ::', function() {
                     port: 3306,
                     user: 'root',
                     password: 'password',
-                    database: 'test'
+                    database: 'sails-hook-sqlize-test'
                 }
             },
 
